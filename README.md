@@ -36,5 +36,5 @@ Java -jar app2.jar c:\example1.txt email,voice,admin
 - Download and unzip package into VS Code. 
 - Make sure your VS Code is set up for Java Development [here](https://code.visualstudio.com/docs/java/java-tutorial).
 - Export jar file using point 3 in this [guide](https://dev.to/rohitk570/create-an-executable-jar-file-on-vs-code-n-command-line-154b).
-- Command line usage: Java -jar app2.jar c:\example1.txt F4,F7,F9,F6,F5,F8,F1,F3,F0
+- Command line usage: Java -jar .\FindTheBestPlan-master.jar c:\example1.txt F4,F7,F9,F6,F5,F8,F1,F3,F0
 - example1.txt file is provided in root directory.
