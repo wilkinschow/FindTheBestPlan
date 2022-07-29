@@ -15,16 +15,19 @@ public class Result implements Comparable<Result>{
 	}
 	@Override
 	public String toString() {
+		//return "Result [combinedPrice=" + combinedPrice + ", combinedPlans=" + combinedPlans + ", combinedServices=" + combinedServices + "]" + System.lineSeparator();
 		return combinedPrice+", "+combinedPlans.toString()
 	    .replace("[", "")  //remove the right bracket
 	    .replace("]", "")  //remove the left bracket
 	    .trim();
 	}
 	public void addPlan(String planName, Long price, String service) {
-		//Check if the selected service is already in the pool
-		if(!(this.combinedPlans.contains(planName) || this.combinedServices.contains(service))) {
-			this.combinedPlans.add(planName);
-			this.combinedPrice+=price;
+		//Check if the selected service is already in the pool, if it contains the plan but not the svc, add it for free.
+		if(!(this.combinedServices.contains(service))) {
+			if(!(this.combinedPlans.contains(planName))){
+				this.combinedPlans.add(planName);
+				this.combinedPrice+=price;
+			}
 			this.combinedServices.add(service);
 		}
 	}

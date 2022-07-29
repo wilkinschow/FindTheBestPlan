@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.*;
 
 public class app2 {
-    static String selectedPlans = "F4,F7,F9,F6,F5,F8,F1,F3,F0";
+    static String selectedPlans = "F5,F2,F9,F0,F7,F6,F8,F3";
 	public static void main(String[] args) {
         List<ServicePlans> servicePlans = new ArrayList<>();
 		List<Result> results = new ArrayList<>();
